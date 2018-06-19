@@ -1,0 +1,43 @@
+{
+    "db": {
+        "host": "35.192.101.179",
+        "user": "root",
+        "password": "Monday1234$$",
+        "db": "nmk_internet_db"
+    },
+    "logfile_name": "logger",
+    "tables": [
+        {
+            "search_id": "347",
+            "table": "item_master_db",
+            "id_prefix": "it_"
+        },
+        {
+            "search_id": "349",
+            "table": "po_master_db",
+            "id_prefix": "po_"
+        },
+        {
+            "search_id": "358",
+            "table": "inventory_master_db",
+            "id_prefix": "in_",
+            "truncate": false
+        }
+,        {
+            "search_id": "350",
+            "table": "so_master_db",
+            "id_prefix": "so_"
+        },        {
+            "search_id": "352",
+            "table": "transaction_db",
+            "id_prefix": "tr_"
+        },        {
+            "search_id": "361",
+            "table": "customer_db",
+            "id_prefix": "co_"
+        },        {
+            "search_id": "383",
+            "table": "return_master_db",
+            "id_prefix": "re_"
+        }    ]
+}
