@@ -1,0 +1,5 @@
+cron:
+- description: "nmk datawarehouse"
+  url: /
+  schedule: every 24 hours
+ 

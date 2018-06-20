@@ -1,0 +1,55 @@
+
+CREATE TABLE `item_master` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sku` varchar(100) DEFAULT NULL,
+  `master_sku` varchar(100) DEFAULT NULL,
+  `upc_code` varchar(100) DEFAULT NULL,
+  `complete_item_name` varchar(500) DEFAULT NULL,
+  `product` varchar(100) DEFAULT NULL,
+  `category` varchar(100) DEFAULT NULL,
+  `sub_category` varchar(100) DEFAULT NULL,
+  `design` varchar(100) DEFAULT NULL,
+  `color` varchar(100) DEFAULT NULL,
+  `item_size` varchar(100) DEFAULT NULL,
+  `image_url` varchar(100) DEFAULT NULL,
+  `average_cost` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=30158 DEFAULT CHARSET=latin1;
+
+
+
+CREATE TABLE `po_master` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `document_number` varchar(200) DEFAULT NULL,
+  `internal_id` varchar(200) DEFAULT NULL,
+  `status` varchar(200) DEFAULT NULL,
+  `date_created` varchar(200) DEFAULT NULL,
+  `item_rate` varchar(200) DEFAULT NULL,
+  `quantity` varchar(200) DEFAULT NULL,
+  `eta_arrive_by_date` varchar(200) DEFAULT NULL,
+  `amount` varchar(200) DEFAULT NULL,
+  `location` varchar(200) DEFAULT NULL,
+  `last_modified` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8545 DEFAULT CHARSET=latin1;
+
+
+alter table po_master add nmk_id varchar(20)
+
+create trigger po_master_nmk_id before insert on po_master for each row set NEW.nmk_id = concat('po_', NEW.id)
+
+
+
+CREATE TABLE `inventory_master` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `last_modified` varchar(45) DEFAULT NULL,
+  `item_inernalid` varchar(200) DEFAULT NULL,
+  `average_cost` varchar(200) DEFAULT NULL,
+  `total_available` varchar(200) DEFAULT NULL,
+  `regal443ecommerce` varchar(200) DEFAULT NULL,
+  `regal443ecommerce_flash_sale` varchar(45) DEFAULT NULL,
+  `regal443ecommerce_flash_sale_non_flash_sale` varchar(200) DEFAULT NULL,
+  `san_ramon_office` varchar(200) DEFAULT NULL,
+  `amazon_pa` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
